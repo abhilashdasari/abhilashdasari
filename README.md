@@ -1,6 +1,6 @@
 ### Hi i am Abhilash Dasari 👋
 
-- 🔭 I’m currently working on How splicing is affected in Lung and liver disorders
+- 🔭 I’m currently working on How splicing is affected in Lung :lungs: and liver disorders
 - 🌱 I'm a PhD at Indian Institute of Technology, Delhi, India
 - 👯 I’m looking to collaborate with the people working in the Health care sector
 - 🤔 I’m looking for help who can understand programming and Life science.
