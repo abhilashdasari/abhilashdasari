@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section id="about" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1>Dasari Abhilash</h1>
+                    <h2>PhD Researcher at IIT Delhi</h2>
+                    <p class="lead">Specializing in Transcriptomics (Bulk, single cell and spatial)</p>
+                    <div class="social-links">
+                        <a href="mailto:abhilashdasari.10@gmail.com" class="btn btn-outline-primary">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/abhilash-dasari" class="btn btn-outline-primary">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/abhilashdasari" class="btn btn-outline-primary">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Research Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>PhD Thesis Project (Bioinformatics)</h3>
+                    <p class="institution">Indian Institute of Technology Delhi</p>
+                    <p class="period">September 2020 - Present</p>
+                    <p>Working with Dr. Ishaan Gupta on Dissecting the role of alternative splicing in respiratory and hepatobiliary pathology.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>M.Sc Thesis Project (Genomics)</h3>
+                    <p class="institution">University of Hyderabad</p>
+                    <p class="period">May 2019 - May 2020</p>
+                    <p>Working with Dr. Vivek T to discover the genes underlying tolerance against cry toxin in Achaea Janata.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Publications</h2>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="publication-item">
+                        <h3>Molecular signature of postmortem lung tissue from COVID-19 patients suggests distinct trajectories driving mortality</h3>
+                        <p class="journal">Disease Models and Mechanisms</p>
+                    </div>
+                    <div class="publication-item">
+                        <h3>Novel omics technology driving translational research in precision oncology</h3>
+                        <p class="journal">Advances in Genetics</p>
+                    </div>
+                    <div class="publication-item">
+                        <h3>Gut-specific arylphorin mediates midgut regenerative response against Cry-induced damage in Achaea janata</h3>
+                        <p class="journal">Comparative Biochemistry and Physiology Part B</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-code"></i> R</li>
+                            <li><i class="fas fa-code"></i> Python</li>
+                            <li><i class="fas fa-terminal"></i> Bash</li>
+                        </ul>
+                        <a href="{{ url_for('programming_skills') }}" class="btn btn-outline-primary mt-3">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill-category">
+                        <h3>Computational Biology</h3>
+                        <ul class="skill-list">
+                            <li>Bulk RNA-Seq Analysis</li>
+                            <li>Cell Deconvolution Analysis</li>
+                            <li>Single-cell and Spatial RNA Sequencing</li>
+                        </ul>
+                        <a href="{{ url_for('computational_biology') }}" class="btn btn-outline-primary mt-3">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p class="lead">Lab 232A, Block-1, DBEB, IIT Delhi, Hauz Khas, New Delhi. PIN:110016</p>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> abhilashdasari.10@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +91-8688964492</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

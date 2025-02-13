@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="section-padding">
+    <div class="container">
+        <h1 class="section-title">Blog</h1>
+        
+        {% if posts %}
+            {% for post in posts %}
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">{{ post.title }}</h2>
+                    <p class="card-text text-muted">{{ post.date }}</p>
+                    <p class="card-text">{{ post.excerpt }}</p>
+                    <a href="{{ url_for('blog_post', post_id=post.id) }}" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="text-center">
+                <p class="lead">Stay tuned! Blog posts coming soon.</p>
+                <p>This section will feature articles about:</p>
+                <ul class="list-unstyled">
+                    <li>Latest research findings</li>
+                    <li>Computational biology tutorials</li>
+                    <li>Academic insights and experiences</li>
+                    <li>Technical guides and best practices</li>
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}
