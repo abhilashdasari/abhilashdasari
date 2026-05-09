@@ -32,7 +32,7 @@ title: Home
                         <a href="https://github.com/abhilashdasari" class="btn btn-outline-primary" aria-label="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="{{ '/attached_assets/CV_abhi_oct_24.pdf' | relative_url }}" class="btn btn-primary" target="_blank" rel="noopener" aria-label="Download CV PDF">
+                        <a href="{{ '/attached_assets/CV_Postdoc_abhi.pdf' | relative_url }}" class="btn btn-primary" target="_blank" rel="noopener" aria-label="Download CV PDF">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                     </div>
@@ -54,6 +54,19 @@ title: Home
             </div>
         </div>
     </section>
+
+    <script>
+    // Fallback for local preview without Jekyll/Liquid rendering:
+    document.addEventListener('DOMContentLoaded', function () {
+        var img = document.querySelector('.hero-photo');
+        if (!img) return;
+        var src = img.getAttribute('src') || '';
+        if (src.indexOf('{') !== -1) {
+            // replace with a plain relative path so python/simple servers can load it
+            img.src = '/attached_assets/abhi.jpg';
+        }
+    });
+    </script>
 
     <!-- Research Section -->
     <section id="research" class="section-padding">
@@ -126,7 +139,7 @@ title: Home
 
                         <div class="publication-group mt-3">
                             <p>For the complete list of publications, preprints and links to full-texts, download the CV below.</p>
-                            <p><a href="{{ '/attached_assets/CV_abhi_oct_24.pdf' | relative_url }}" class="btn btn-primary" target="_blank" rel="noopener">Download CV (PDF)</a></p>
+                            <p><a href="{{ '/attached_assets/CV_Postdoc_abhi.pdf' | relative_url }}" class="btn btn-primary" target="_blank" rel="noopener">Download CV (PDF)</a></p>
                         </div>
                 </div>
             </div>
@@ -316,7 +329,7 @@ title: Home
                         <div class="contact-info">
                             <p><i class="fas fa-envelope"></i> abhilashdasari.10@gmail.com</p>
                             <p><i class="fas fa-phone"></i> +91-8688964492</p>
-                            <a href="{{ '/attached_assets/CV_abhi_oct_24.pdf' | relative_url }}" class="btn btn-primary mt-3" target="_blank" rel="noopener">Download CV</a>
+                            <a href="{{ '/attached_assets/CV_Postdoc_abhi.pdf' | relative_url }}" class="btn btn-primary mt-3" target="_blank" rel="noopener">Download CV</a>
                         </div>
                     </div>
                 </div>
