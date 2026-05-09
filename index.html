@@ -5,30 +5,49 @@ title: Home
     <!-- Hero Section -->
     <section id="about" class="hero-section">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8 mx-auto text-center">
+            <div class="hero-panel">
+                <div class="hero-copy">
+                    <p class="eyebrow">Researcher • Transcriptomics • Bioinformatics</p>
                     <h1>Dasari Abhilash</h1>
                     <h2>PhD Researcher at IIT Delhi</h2>
                     <p class="lead">Specializing in Transcriptomics (Bulk, single cell and spatial)</p>
+                    <div class="hero-highlights">
+                        <span>Bulk RNA-seq</span>
+                        <span>Single-cell RNA-seq</span>
+                        <span>Spatial transcriptomics</span>
+                    </div>
                     <div class="social-links">
-                        <a href="mailto:abhilashdasari.10@gmail.com" class="btn btn-outline-primary">
+                        <a href="mailto:abhilashdasari.10@gmail.com" class="btn btn-outline-primary" aria-label="Email">
                             <i class="fas fa-envelope"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/abhilash-dasari-uoh" class="btn btn-outline-primary">
+                        <a href="https://www.linkedin.com/in/abhilash-dasari-uoh" class="btn btn-outline-primary" aria-label="LinkedIn">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="https://scholar.google.com/citations?user=8LCYOTsAAAAJ&hl=en" class="btn btn-outline-primary" title="Google Scholar">
+                        <a href="https://scholar.google.com/citations?user=8LCYOTsAAAAJ&hl=en" class="btn btn-outline-primary" title="Google Scholar" aria-label="Google Scholar">
                             <i class="fas fa-graduation-cap"></i>
                         </a>
-                        <a href="https://orcid.org/0000-0003-1763-3659" class="btn btn-outline-primary" title="ORCID">
+                        <a href="https://orcid.org/0000-0003-1763-3659" class="btn btn-outline-primary" title="ORCID" aria-label="ORCID">
                             <i class="fas fa-id-badge"></i>
                         </a>
-                        <a href="https://github.com/abhilashdasari" class="btn btn-outline-primary">
+                        <a href="https://github.com/abhilashdasari" class="btn btn-outline-primary" aria-label="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="{{ '/attached_assets/CV_abhi_oct_24.pdf' | relative_url }}" class="btn btn-primary" target="_blank" rel="noopener">
+                        <a href="{{ '/attached_assets/CV_abhi_oct_24.pdf' | relative_url }}" class="btn btn-primary" target="_blank" rel="noopener" aria-label="Download CV PDF">
                             <i class="fas fa-file-pdf"></i>
                         </a>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <p class="hero-card-label">Research focus</p>
+                    <ul class="hero-card-list">
+                        <li>Bulk RNA-seq, single-cell RNA-seq, and spatial transcriptomics</li>
+                        <li>Alternative splicing and transcript isoform analysis</li>
+                        <li>Bioinformatics pipelines and data visualization</li>
+                        <li>Teaching, mentoring, and scientific communication</li>
+                    </ul>
+                    <div class="hero-card-footer">
+                        <a href="#publications">View Publications</a>
+                        <a href="#contact">Contact</a>
                     </div>
                 </div>
             </div>
@@ -38,7 +57,10 @@ title: Home
     <!-- Research Section -->
     <section id="research" class="section-padding">
         <div class="container">
-            <h2 class="section-title">Research Experience</h2>
+            <div class="section-heading">
+                <p class="eyebrow">Research journey</p>
+                <h2 class="section-title">Research Experience</h2>
+            </div>
             <div class="timeline">
                 <div class="timeline-item">
                     <h3>Student Exchange Program</h3>
@@ -77,10 +99,13 @@ title: Home
     <!-- Publications Section -->
     <section id="publications" class="section-padding bg-light">
         <div class="container">
-            <h2 class="section-title">Publications</h2>
+            <div class="section-heading">
+                <p class="eyebrow">Selected work</p>
+                <h2 class="section-title">Publications</h2>
+            </div>
             <div class="row">
                 <div class="col-lg-12">
-                        <div class="publication-item mt-3">
+                        <div class="publication-group mt-3">
                             <h4>First / Co-first Author</h4>
                             <ul class="publication-list">
                                 <li>Tanwar, P., Bhattacharya, D., <strong>Dasari, A.</strong>, Bijwe, M., Rana, R., Gupta, I. and Minocha, S., 2024. Dynamic gene expression pattern in zebrafish gallbladder: an experimental study. <em>International Journal of Surgery</em>, 110(12), pp.7585-7589. <a href="https://doi.org/10.1097/js9.0000000000002135" target="_blank" rel="noopener">(DOI)</a></li>
@@ -90,7 +115,7 @@ title: Home
                             </ul>
                         </div>
 
-                        <div class="publication-item mt-3">
+                        <div class="publication-group mt-3">
                             <h4>Second Author</h4>
                             <ul class="publication-list">
                                 <li>Saxena, V., <strong>Abhilash, D.</strong>, Budhraja, A., Dey, S., Tiwari, P., Mohan, A., Gupta, I. and Kumar, S., 2026. RNA sequencing reveals differential expression of circular RNAs in human small cell lung cancer. <em>Scientific Reports</em>. <a href="https://doi.org/10.1038/s41598-026-38145-y" target="_blank" rel="noopener">(DOI)</a></li>
@@ -98,7 +123,7 @@ title: Home
                             </ul>
                         </div>
 
-                        <div class="publication-item mt-3">
+                        <div class="publication-group mt-3">
                             <p>For the complete list of publications, preprints and links to full-texts, download the CV below.</p>
                             <p><a href="{{ '/attached_assets/CV_abhi_oct_24.pdf' | relative_url }}" class="btn btn-primary" target="_blank" rel="noopener">Download CV (PDF)</a></p>
                         </div>
@@ -110,76 +135,107 @@ title: Home
     <!-- Education & Achievements -->
     <section id="education" class="section-padding bg-light">
         <div class="container">
-            <h2 class="section-title">Education</h2>
-            <ul>
-                <li>PhD, Department of Biochemical Engineering and Biotechnology — Indian Institute of Technology Delhi (Sep 2020 - Present)</li>
-                <li>Integrated M.Sc. in Systems Biology — University of Hyderabad (Jul 2015 - May 2020). GPA: 7.73/10.0</li>
-                <li>Higher Secondary School Certificate — Sri Chaitanya junior kalasala (Jun 2013 - May 2015). Percentage: 93.60 (Biology, Physics, Chemistry)</li>
-                <li>Secondary School Certificate — Manair High School (Jun 2012 - Apr 2013). CGPA: 8.8</li>
-            </ul>
-
-            <h2 class="section-title">Academic Achievements</h2>
-            <ul>
-                <li>CSIR-UGC: Secured ranks 97 and 115 in Joint CSIR-UGC Junior Research Fellowship and Eligibility for Lectureship (NET) exams (Dec 2018, 2019)</li>
-                <li>IIT-JAM: Secured ranks 454 (Biological Sciences) and 687 (Biotechnology)</li>
-                <li>GATE-2020: Rank 292 (Life Sciences)</li>
-            </ul>
+            <div class="section-heading">
+                <p class="eyebrow">Background and milestones</p>
+                <h2 class="section-title">Education</h2>
+            </div>
+            <div class="info-grid two-column-grid">
+                <div class="info-card">
+                    <h3>Education</h3>
+                    <ul class="clean-list">
+                        <li>PhD, Department of Biochemical Engineering and Biotechnology — Indian Institute of Technology Delhi (Sep 2020 - Present)</li>
+                        <li>Integrated M.Sc. in Systems Biology — University of Hyderabad (Jul 2015 - May 2020). GPA: 7.73/10.0</li>
+                        <li>Higher Secondary School Certificate — Sri Chaitanya junior kalasala (Jun 2013 - May 2015). Percentage: 93.60 (Biology, Physics, Chemistry)</li>
+                        <li>Secondary School Certificate — Manair High School (Jun 2012 - Apr 2013). CGPA: 8.8</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>Academic Achievements</h3>
+                    <ul class="clean-list">
+                        <li>CSIR-UGC: Secured ranks 97 and 115 in Joint CSIR-UGC Junior Research Fellowship and Eligibility for Lectureship (NET) exams (Dec 2018, 2019)</li>
+                        <li>IIT-JAM: Secured ranks 454 (Biological Sciences) and 687 (Biotechnology)</li>
+                        <li>GATE-2020: Rank 292 (Life Sciences)</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Leadership & Workshops -->
     <section id="leadership" class="section-padding">
         <div class="container">
-            <h2 class="section-title">Leadership & Activities</h2>
-            <ul>
-                <li>CAIC-PG Convenor: Co-curricular and Academic Interaction Council (PhD Convenor) 2024-25, IIT Delhi</li>
-                <li>Research Scholar Forum (RSF) executive committee member 2023-24</li>
-            </ul>
-
-            <h2 class="section-title">Workshops & Symposium</h2>
-            <ul>
-                <li>Speaker at Spatial transcriptomics workshop conducted at ICGEB. Aug-2024</li>
-                <li>Poster presentation at Indian Cancer Genome Atlas (ICGA) - 2024</li>
-                <li>Human Cell Atlas Asia 2023 Meeting</li>
-                <li>DBEB BIOSPHERE symposium (2023, 2024) — Oral and Poster presentations</li>
-                <li>National Symposium on Frontiers in Biomedical Research (Nov 2022)</li>
-                <li>IUBMB Focused Meeting – Biochemistry and Molecular Biology of RNA Viruses (Nov 2022)</li>
-                <li>Won first prize in Hackbiome, a bioscience hackathon organised by the Bioscience Society, NIT Rourkela (Apr 2021)</li>
-                <li>2nd Workshop of Advanced Bioinformatics: Network Medicine (Feb 2021) organised by LAVIS - Institute of Neurobiology-Juriquilla, RiaBio</li>
-                <li>GIAN workshop on "Applied photosynthesis: putting nature into work" (Sep 2019), University of Hyderabad</li>
-                <li>Workshop "New vistas in drug discovery" (Mar 2019), University of Hyderabad</li>
-                <li>Workshop "Data Science in Biomedical Research" (Dec 2018), University of Hyderabad</li>
-                <li>Rural immersion camp 2018 (NCRI with UoH and MHRD)</li>
-                <li>GIAN workshop "Systems Biology for Drug Discovery and Personalized Medicine" (Jul 2018)</li>
-                <li>Systems, Synthetic, Chemical symposium (2017), Bose Institute, Kolkata</li>
-                <li>Participated in MIMASA science quiz preliminaries (2016, 2017) conducted by IISER Pune</li>
-            </ul>
+            <div class="section-heading">
+                <p class="eyebrow">Service and engagements</p>
+                <h2 class="section-title">Leadership & Activities</h2>
+            </div>
+            <div class="info-grid two-column-grid">
+                <div class="info-card">
+                    <h3>Leadership</h3>
+                    <ul class="clean-list">
+                        <li>CAIC-PG Convenor: Co-curricular and Academic Interaction Council (PhD Convenor) 2024-25, IIT Delhi</li>
+                        <li>Research Scholar Forum (RSF) executive committee member 2023-24</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>Workshops & Symposium</h3>
+                    <ul class="clean-list">
+                        <li>Speaker at Spatial transcriptomics workshop conducted at ICGEB. Aug-2024</li>
+                        <li>Poster presentation at Indian Cancer Genome Atlas (ICGA) - 2024</li>
+                        <li>Human Cell Atlas Asia 2023 Meeting</li>
+                        <li>DBEB BIOSPHERE symposium (2023, 2024) — Oral and Poster presentations</li>
+                        <li>National Symposium on Frontiers in Biomedical Research (Nov 2022)</li>
+                        <li>IUBMB Focused Meeting – Biochemistry and Molecular Biology of RNA Viruses (Nov 2022)</li>
+                        <li>Won first prize in Hackbiome, a bioscience hackathon organised by the Bioscience Society, NIT Rourkela (Apr 2021)</li>
+                        <li>2nd Workshop of Advanced Bioinformatics: Network Medicine (Feb 2021) organised by LAVIS - Institute of Neurobiology-Juriquilla, RiaBio</li>
+                        <li>GIAN workshop on "Applied photosynthesis: putting nature into work" (Sep 2019), University of Hyderabad</li>
+                        <li>Workshop "New vistas in drug discovery" (Mar 2019), University of Hyderabad</li>
+                        <li>Workshop "Data Science in Biomedical Research" (Dec 2018), University of Hyderabad</li>
+                        <li>Rural immersion camp 2018 (NCRI with UoH and MHRD)</li>
+                        <li>GIAN workshop "Systems Biology for Drug Discovery and Personalized Medicine" (Jul 2018)</li>
+                        <li>Systems, Synthetic, Chemical symposium (2017), Bose Institute, Kolkata</li>
+                        <li>Participated in MIMASA science quiz preliminaries (2016, 2017) conducted by IISER Pune</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Hobbies -->
     <section id="hobbies" class="section-padding bg-light">
         <div class="container text-center">
-            <h2 class="section-title">Hobbies</h2>
-            <p>Running (10 km), Swimming, Cycling</p>
+            <div class="section-heading">
+                <p class="eyebrow">Beyond the lab</p>
+                <h2 class="section-title">Hobbies</h2>
+            </div>
+            <div class="info-card centered-card">
+                <p>Running (10 km), Swimming, Cycling</p>
+            </div>
         </div>
     </section>
 
     <!-- Teaching & Mentoring -->
     <section id="teaching" class="section-padding">
         <div class="container">
-            <h2 class="section-title">Teaching & Mentor Experience</h2>
-            <ul>
-                <li><strong>Teaching:</strong> Responsible for teaching laboratory sessions to undergraduate students for the BBL434 - Bioinformatics course in 2022 and 2023.</li>
-                <li><strong>Mentor:</strong> Supervised 3 B.Tech and 2 M.S. (Research) students in their final-year projects and mentored several research interns from 2022 to 2026.</li>
-            </ul>
+            <div class="section-heading">
+                <p class="eyebrow">Teaching and mentoring</p>
+                <h2 class="section-title">Teaching & Mentor Experience</h2>
+            </div>
+            <div class="info-card">
+                <ul class="clean-list">
+                    <li><strong>Teaching:</strong> Responsible for teaching laboratory sessions to undergraduate students for the BBL434 - Bioinformatics course in 2022 and 2023.</li>
+                    <li><strong>Mentor:</strong> Supervised 3 B.Tech and 2 M.S. (Research) students in their final-year projects and mentored several research interns from 2022 to 2026.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="section-padding">
         <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="section-heading">
+                <p class="eyebrow">Tooling and methods</p>
+                <h2 class="section-title">Skills & Expertise</h2>
+            </div>
             <div class="row">
                 <div class="col-md-6">
                     <div class="skill-category">
@@ -248,14 +304,19 @@ title: Home
     <!-- Contact Section -->
     <section id="contact" class="section-padding bg-light">
         <div class="container">
-            <h2 class="section-title">Contact</h2>
+            <div class="section-heading">
+                <p class="eyebrow">Get in touch</p>
+                <h2 class="section-title">Contact</h2>
+            </div>
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
-                    <p class="lead">Lab 232A, Block-1, DBEB, IIT Delhi, Hauz Khas, New Delhi. PIN:110016</p>
-                    <div class="contact-info">
-                        <p><i class="fas fa-envelope"></i> abhilashdasari.10@gmail.com</p>
-                        <p><i class="fas fa-phone"></i> +91-8688964492</p>
-                        <a href="{{ '/attached_assets/CV_abhi_oct_24.pdf' | relative_url }}" class="btn btn-primary mt-3" target="_blank" rel="noopener">Download CV</a>
+                    <div class="info-card contact-card">
+                        <p class="lead">Lab 232A, Block-1, DBEB, IIT Delhi, Hauz Khas, New Delhi. PIN:110016</p>
+                        <div class="contact-info">
+                            <p><i class="fas fa-envelope"></i> abhilashdasari.10@gmail.com</p>
+                            <p><i class="fas fa-phone"></i> +91-8688964492</p>
+                            <a href="{{ '/attached_assets/CV_abhi_oct_24.pdf' | relative_url }}" class="btn btn-primary mt-3" target="_blank" rel="noopener">Download CV</a>
+                        </div>
                     </div>
                 </div>
             </div>
