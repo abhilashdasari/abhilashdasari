@@ -89,7 +89,7 @@ if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
 fi
 
 echo "==> Committing site content for GitHub Pages (branch: $GIT_BRANCH)"
-git add index.html _layouts templates static static_site attached_assets \
+git add index.html _layouts templates blog static static_site attached_assets \
         main.py _config.yml deploy.sh README_DEPLOY.md DEPLOYMENT.md 2>/dev/null || true
 
 if git diff --cached --quiet; then

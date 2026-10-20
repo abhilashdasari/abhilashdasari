@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}Making multi-cohort RNA-seq analyses reproducible | Dasari Abhilash{% endblock %}
+{% block meta_description %}A practical framework for keeping study design, computational decisions, and biological interpretation connected across clinical RNA-seq cohorts.{% endblock %}
+
+{% block content %}
+<main class="article-page">
+    <header class="article-hero">
+        <div class="article-shell">
+            <a class="article-back" href="{{ url_for('blog') }}">← All research notes</a>
+            <p class="eyebrow">Transcriptomics · Reproducibility</p>
+            <h1>Making multi-cohort RNA-seq analyses reproducible</h1>
+            <p class="article-deck">A practical framework for keeping study design, computational decisions, and biological interpretation connected across clinical cohorts.</p>
+            <div class="article-byline"><span>By Dasari Abhilash</span><span>October 2026</span><span>7 min read</span></div>
+        </div>
+    </header>
+
+    <article class="article-shell article-body">
+        <section>
+            <p class="section-kicker">Why workflow design matters</p>
+            <h2>A result should be traceable back to the study</h2>
+            <p class="article-lead">In multi-cohort RNA-seq, reproducibility is more than rerunning a script. It means being able to explain how the samples, metadata, references, and analysis choices shaped each result.</p>
+            <p>In my PhD work at IIT Delhi, I have built automated transcriptomics and alternative-splicing workflows for clinical datasets on Slurm-managed high-performance computing systems. The work has reinforced a simple principle: keep the scientific question and the computational path visible at every stage.</p>
+            <p>The practices below are a useful starting point. The right thresholds and statistical model depend on the study design, assay, and question; a pipeline should make those choices explicit rather than hide them behind defaults.</p>
+        </section>
+        <section>
+            <p class="section-kicker">01 · Before analysis</p>
+            <h2>Understand the cohorts before combining them</h2>
+            <p>Start with a sample map that records cohort membership, condition, tissue, relevant clinical variables, and technical factors such as library preparation or sequencing batch. Check that those variables are complete and that the study design can distinguish the biological comparison from the technical structure.</p>
+            <p>This step can change the analysis plan. If condition and batch are fully confounded, a correction method cannot recover information the design does not contain. Record that limitation and interpret downstream results accordingly.</p>
+        </section>
+        <section>
+            <p class="section-kicker">02 · Quality control</p>
+            <h2>Make quality decisions visible</h2>
+            <p>Review sample-level quality within each cohort before integration. Document the measures used, the reasons a sample is retained or excluded, and any cohort-specific differences. Shared criteria can make comparisons easier, but they should not force distinct datasets into an inappropriate one-size-fits-all threshold.</p>
+            <p>Keep a record of the samples entering each analysis. That makes it possible to explain why the sample count changes between the initial data and a particular result.</p>
+        </section>
+        <section>
+            <p class="section-kicker">03 · Computational provenance</p>
+            <h2>Record the ingredients of every result</h2>
+            <p>Version the workflow code and record the genome build, annotation release, software versions, parameters, and input files. Store logs and intermediate summaries with each run. On an HPC cluster, workflow managers such as Nextflow or Snakemake can help define dependencies and make execution repeatable across jobs.</p>
+            <p>A useful handoff is one where another analyst can identify what ran, on which inputs, with which reference files, and where to find the outputs. Keep cohort-level and combined outputs distinguishable so that later comparisons do not depend on memory or undocumented manual steps.</p>
+        </section>
+        <section>
+            <p class="section-kicker">04 · Statistical interpretation</p>
+            <h2>Preserve cohort structure in the analysis</h2>
+            <p>Pooling can increase sample size, but it can also obscure differences in recruitment, processing, or clinical context. Choose a model that reflects how the cohorts were collected. When the data support it, compare patterns across cohorts and report where evidence is consistent or differs.</p>
+            <p>Batch adjustment is not evidence that a biological signal is valid. Inspect the data before and after adjustment, preserve the unadjusted context, and check that the model has not removed the variation needed to answer the research question.</p>
+        </section>
+        <section>
+            <p class="section-kicker">05 · Beyond gene-level counts</p>
+            <h2>Match the analysis to the biology</h2>
+            <p>Gene-level differential expression does not capture every transcriptomic change. If the question concerns isoforms or alternative splicing, include transcript- or event-level quantification and inspect the evidence supporting important events. The appropriate tools depend on the data and the event being studied; no single output should stand in for biological review.</p>
+            <p>For candidate signals, connect transcriptomic findings to clinical metadata and other available evidence. Multi-omics integration can help prioritize patterns for follow-up, while collaboration with clinical and pathology teams helps keep computational interpretations grounded in the tissue and disease context.</p>
+        </section>
+        <section>
+            <p class="section-kicker">06 · Privacy and collaboration</p>
+            <h2>Plan for data boundaries from the start</h2>
+            <p>Clinical datasets can carry privacy obligations that affect where computation can run. In my work, I have developed an on-premise, privacy-preserving LLM inference setup for biomedical scripting on local GPU and HPC resources. The broader lesson is to make data boundaries part of system design and to keep sensitive inputs within the approved environment.</p>
+            <p class="article-conclusion">A reproducible analysis is a scientific record: it shows how the study design became data, how the data became a result, and what evidence is still needed before that result becomes a biological claim.</p>
+        </section>
+    </article>
+</main>
+{% endblock %}

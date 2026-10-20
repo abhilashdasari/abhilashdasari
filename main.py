@@ -23,12 +23,16 @@ def computational_biology():
 @app.route('/blog')
 def blog():
     posts = [{
-        'title': "A Senior PI's Blueprint for Discovery-Grade Research Gap Identification",
-        'date': 'In progress',
-        'excerpt': 'A first-principles framework for separating consequential knowledge gaps from nomenclature mismatches, technical artifacts, and unmeasurable questions.',
-        'slug': 'discovery-grade-research-gap-identification'
+        'title': 'Making multi-cohort RNA-seq analyses reproducible',
+        'date': 'October 2026',
+        'excerpt': 'Practical principles for keeping cohort structure, workflow decisions, and biological interpretation visible throughout a clinical transcriptomics analysis.',
+        'route': 'reproducible_multi_cohort_rnaseq'
     }]
     return render_template('blog/index.html', posts=posts)
+
+@app.route('/blog/reproducible-multi-cohort-rnaseq')
+def reproducible_multi_cohort_rnaseq():
+    return render_template('blog/reproducible-multi-cohort-rnaseq.html')
 
 @app.route('/blog/discovery-grade-research-gap-identification')
 def research_gap_blueprint():
