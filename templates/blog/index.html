@@ -1,20 +1,27 @@
 {% extends "base.html" %}
+{% block title %}Research Notes | Dasari Abhilash{% endblock %}
+{% block meta_description %}Research notes on transcriptomics, computational biology, scientific methods, and discovery.{% endblock %}
 
 {% block content %}
-<section class="section-padding">
+<section class="section-padding blog-index">
     <div class="container">
-        <h1 class="section-title">Blog</h1>
+        <div class="section-heading">
+            <p class="eyebrow">Ideas, methods &amp; field notes</p>
+            <h1 class="section-title">Research Notes</h1>
+            <p class="blog-index-intro">Long-form thinking on how biological discoveries are framed, tested, and translated.</p>
+        </div>
         
         {% if posts %}
             {% for post in posts %}
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h2 class="card-title">{{ post.title }}</h2>
-                    <p class="card-text text-muted">{{ post.date }}</p>
-                    <p class="card-text">{{ post.excerpt }}</p>
-                    <a href="{{ url_for('blog_post', post_id=post.id) }}" class="btn btn-primary">Read More</a>
+            <article class="blog-card">
+                <div class="blog-card-marker" aria-hidden="true">01</div>
+                <div class="blog-card-body">
+                    <div class="blog-card-meta"><span>Research strategy</span><span>{{ post.date }}</span></div>
+                    <h2><a href="{{ url_for('research_gap_blueprint') }}">{{ post.title }}</a></h2>
+                    <p>{{ post.excerpt }}</p>
+                    <a href="{{ url_for('research_gap_blueprint') }}" class="article-link">Read the working article <span aria-hidden="true">→</span></a>
                 </div>
-            </div>
+            </article>
             {% endfor %}
         {% else %}
             <div class="text-center">

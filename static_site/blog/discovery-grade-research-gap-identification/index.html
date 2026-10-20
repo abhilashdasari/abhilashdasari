@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A rigorous framework for identifying mechanistically grounded, experimentally addressable, and biologically consequential research gaps.">
+    <meta name="author" content="Dasari Abhilash">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="A Senior PI's Blueprint for Discovery-Grade Research Gap Identification">
+    <meta property="og:description" content="A first-principles framework for distinguishing consequential unknowns from technical artifacts and unmeasurable questions.">
+    <title>A Senior PI's Blueprint for Research Gap Identification | Dasari Abhilash</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="../../static/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">Dasari Abhilash</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../index.html#research">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../index.html#publications">Publications</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="skillsDropdown" role="button" data-bs-toggle="dropdown">Skills</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../../skills/programming.html">Programming</a></li>
+                            <li><a class="dropdown-item" href="../../skills/computational_biology.html">Computational Biology</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="../index.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="article-page">
+        <header class="article-hero">
+            <div class="article-shell">
+                <a class="article-back" href="../index.html">← All research notes</a>
+                <p class="eyebrow">Research strategy · Working article</p>
+                <h1>A Senior PI's Blueprint for Discovery-Grade Research Gap Identification</h1>
+                <p class="article-deck">A first-principles framework for distinguishing consequential unknowns from nomenclature mismatches, technical artifacts, and questions that cannot yet be measured.</p>
+                <div class="article-byline"><span>By Dasari Abhilash</span><span>Parts 1–8</span><span>21 min read</span></div>
+            </div>
+        </header>
+
+        <article class="article-shell article-body">
+            <section>
+                <p class="section-kicker">01 · Scientific formulation</p>
+                <h2>Executive Scientific Formulation &amp; First Principles</h2>
+                <p class="article-lead">A “research gap” is <strong>not</strong> simply what has not been published.</p>
+                <p>That naive, keyword-level definition can produce as many as 90% false positives: questions that <em>have</em> been studied, but under different nomenclature, in another model organism, or with a technique that has since been superseded.</p>
+                <aside class="key-definition">
+                    <span class="definition-label">Working definition</span>
+                    <p>A <strong>true research gap</strong> is a mechanistically grounded, experimentally addressable, and biologically consequential absence in the knowledge graph—one that, if closed, would alter our understanding of a pathway, a disease mechanism, or a therapeutic target.</p>
+                </aside>
+                <p>From 20 years of running a functional genomics lab, I have learned that the most dangerous “gap” is one that <strong>looks novel but is actually a technical artifact</strong>. Consider the claim that nobody has measured X in tissue Y. The underlying reason may be that the assay fails in a high-lipid environment, the protein sits below the detection limit, or the relevant cell type constitutes less than 0.3% of the population.</p>
+                <p>A credible gap finder must therefore distinguish <strong>epistemic gaps</strong> from <strong>ontological gaps</strong> and <strong>technical limitations</strong>.</p>
+            </section>
+
+            <section aria-labelledby="three-axes-title">
+                <p class="section-kicker">A three-axis model</p>
+                <h2 id="three-axes-title">Three orthogonal ways to interrogate a gap</h2>
+                <p>The discovery system should evaluate every candidate across all three axes—not merely whether a fact is absent from the literature.</p>
+                <div class="axis-grid">
+                    <article class="axis-card">
+                        <div class="axis-number">01</div><h3>Epistemic</h3>
+                        <p class="axis-question">What do we <em>not know</em> that we <em>could</em> know?</p>
+                        <p class="axis-example"><span>Example</span> The <i>K</i><sub>d</sub> of METTL3 for the DRACH motif in <em>trans</em>—on a non-cognate mRNA—has never been measured by SPR or MST.</p>
+                    </article>
+                    <article class="axis-card">
+                        <div class="axis-number">02</div><h3>Ontological</h3>
+                        <p class="axis-question">What does <em>not exist</em> in the system that <em>should</em>?</p>
+                        <p class="axis-example"><span>Example</span> No known m<sup>6</sup>A reader binds the m<sup>6</sup>A site at position +2 of the 5′ UTR of <em>TP53</em> mRNA. Is this a functional exclusion zone?</p>
+                    </article>
+                    <article class="axis-card">
+                        <div class="axis-number">03</div><h3>Technical</h3>
+                        <p class="axis-question">What can we <em>not yet measure</em>, and what would unlock it?</p>
+                        <p class="axis-example"><span>Example</span> Single-molecule FRET of the METTL3–YTHDF2 complex on a live mRNA in the nucleoplasm has not been achieved because the FRET pair photobleaches before the 30-second binding event completes.</p>
+                    </article>
+                </div>
+                <p class="article-conclusion">A discovery-grade gap finder must score and rank candidates across all three axes—not just the epistemic one.</p>
+            </section>
+
+            <section aria-labelledby="skill-stack-title">
+                <p class="section-kicker">02 · System architecture</p>
+                <h2 id="skill-stack-title">The Skill Stack: What I Would Add—and Why</h2>
+                <p class="article-lead">The system should behave less like a single search tool and more like a coordinated scientific team.</p>
+                <p>I would architect it as a <strong>multi-agent system</strong> consistent with the LabFlow specialist micro-agent framework. Each skill becomes a dedicated capability module with a sharply defined scientific responsibility.</p>
+                <aside class="source-note"><span class="source-note-label">Architecture reference</span><p><cite>EFFICIENCY_AND_ARCHITECTURE.md</cite>, §6: “Dedicated Bioinformatics Specialist M”</p></aside>
+
+                <div class="tier-heading">
+                    <span class="tier-badge">Tier 1</span>
+                    <div><h3>Core Ingestion &amp; Representation</h3><p>The non-negotiable foundation: recover the evidence, normalize it, and represent relationships before attempting to infer a gap.</p></div>
+                </div>
+
+                <div class="skill-stack">
+                    <article class="skill-module">
+                        <div class="skill-module-header"><span class="skill-index">01</span><div><span class="module-label">Capability module</span><h3>Semantic Literature Mining</h3><p class="module-subtitle">Beyond keyword search</p></div></div>
+                        <div class="skill-module-grid">
+                            <div><h4>What it does</h4><p>Ingests full-text papers—not only abstracts—and extracts <em>mechanistic claims</em>, <em>quantitative parameters</em> (<i>K</i><sub>d</sub>, <i>t</i><sub>1/2</sub>, ΔΔG), <em>negative results</em>, and <em>methodological constraints</em>. It combines a fine-tuned language model with structured extraction: BioBERT or PubMedBERT for entity linking, followed by a rule-based and LLM hybrid for claim extraction.</p></div>
+                            <div class="nonnegotiable"><h4>Why it is non-negotiable</h4><p>As many as 70% of apparent gaps may be false because the information already exists in a methods section, a supplementary table, or an older paper using different nomenclature. Abstract-only search misses this evidence.</p></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-module">
+                        <div class="skill-module-header"><span class="skill-index">02</span><div><span class="module-label">Capability module</span><h3>Knowledge Graph Construction &amp; Traversal</h3></div></div>
+                        <div class="graph-path" aria-label="Example knowledge graph path"><span>Gene</span><i>→</i><span>Protein</span><i>→</i><span>PTM</span><i>→</i><span>Complex</span><i>→</i><span>Pathway</span><i>→</i><span>Phenotype</span><i>→</i><span>Disease</span></div>
+                        <div class="skill-module-grid">
+                            <div><h4>What it does</h4><p>Builds a directed, weighted, and typed graph. Every edge carries its evidence type—genetic, biochemical, imaging, or computational—along with a confidence score and species. The system traverses the graph for <strong>orphan nodes</strong> with fewer than two incoming edges, <strong>contradiction edges</strong> where papers assert opposite directions, and <strong>missing intermediates</strong> where A→C is known but A→B→C is not.</p></div>
+                            <div class="nonnegotiable"><h4>Why it is non-negotiable</h4><p>A gap in a linear literature search is a <em>topological</em> gap in the graph. It cannot be found reliably without representing and traversing that graph.</p></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-module">
+                        <div class="skill-module-header"><span class="skill-index">03</span><div><span class="module-label">Capability module</span><h3>Cross-Database Cross-Referencing</h3></div></div>
+                        <div class="database-tags" aria-label="Databases queried"><span>UniProt</span><span>PDB</span><span>ChEMBL</span><span>GTEx</span><span>COSMIC</span><span>m6AWeb</span><span>SRAMP</span><span>MeRIP-seq meta-sets</span></div>
+                        <div class="skill-module-grid">
+                            <div><h4>What it does</h4><p>Queries complementary sources for PTM sites, subcellular localization, structural coverage, compound–target pairs, tissue expression, somatic mutations, and m<sup>6</sup>A evidence. It flags entities that are well characterized in one database but conspicuously absent from another.</p></div>
+                            <div class="nonnegotiable"><h4>Why it is non-negotiable</h4><p>A protein with 12 PDB structures but no ChEMBL entries suggests a <em>therapeutic gap</em>. A gene expressed across 40 GTEx tissues but with no m<sup>6</sup>A sites in any MeRIP-seq dataset suggests a <em>regulatory gap</em>.</p></div>
+                        </div>
+                    </article>
+
+                    <article class="skill-module">
+                        <div class="skill-module-header"><span class="skill-index">04</span><div><span class="module-label">Capability module</span><h3>Negative Result &amp; Replication Mining</h3></div></div>
+                        <div class="skill-module-grid">
+                            <div><h4>What it does</h4><p>Specifically searches for papers reporting “no effect,” “no binding,” or “no enrichment”; failed replication attempts; and retracted papers together with the narratives that replaced them.</p></div>
+                            <div class="nonnegotiable"><h4>Why it is non-negotiable</h4><p>The most valuable signals can be hidden in negative results. If three independent laboratories failed to detect YTHDF2 binding to a specific m<sup>6</sup>A site, that is not an unexplored gap—it is evidence for a <em>biological fact</em>.</p></div>
+                        </div>
+                    </article>
+                </div>
+            <div class="tier-heading tier-heading-spaced">
+                <span class="tier-badge">Tier 2</span>
+                <div>
+                    <h3>Gap Detection &amp; Classification</h3>
+                    <p>Separate genuine unresolved biology from contextual disagreement, obsolete evidence, and missing measurement capability.</p>
+                </div>
+            </div>
+
+            <div class="skill-stack">
+                <article class="skill-module">
+                    <div class="skill-module-header"><span class="skill-index">05</span><div><span class="module-label">Detection module</span><h3>Contradiction &amp; Inconsistency Detector</h3></div></div>
+                    <div class="classification-tags"><span>Cell-type dependent</span><span>Condition-dependent</span><span>Methodological artifact</span><span>Genuinely unresolved</span></div>
+                    <div class="skill-module-grid">
+                        <div><h4>What it does</h4><p>Identifies papers that make mutually exclusive mechanistic claims about the same interaction—for example, one locating METTL3 in the nucleus and another finding it in the cytoplasm of HeLa cells. It then classifies the disagreement by its most plausible source.</p></div>
+                        <div class="nonnegotiable"><h4>Why it is non-negotiable</h4><p>Contradictions are among the highest-value gaps: they indicate that the field is stuck, and resolving them often demands a new experimental paradigm.</p></div>
+                    </div>
+                </article>
+
+                <article class="skill-module">
+                    <div class="skill-module-header"><span class="skill-index">06</span><div><span class="module-label">Detection module</span><h3>Methodological Gap Mapper</h3></div></div>
+                    <div class="method-strip" aria-label="Example method coverage for m6A dynamics in neurons"><span>MeRIP-seq <b>✓</b></span><span>miCLIP <b>✓</b></span><span>smFRET <b class="missing">✕</b></span><span>Cryo-EM <b class="missing">✕</b></span><span>Live-cell imaging <b class="missing">✕</b></span></div>
+                    <div class="skill-module-grid">
+                        <div><h4>What it does</h4><p>Maps which techniques have—and have not—been applied to each biological question. For m<sup>6</sup>A dynamics in neurons, for example, MeRIP-seq and miCLIP may exist while single-molecule FRET, cryo-EM of the complex, and live-cell imaging with an optogenetic m<sup>6</sup>A writer remain absent.</p></div>
+                        <div class="nonnegotiable"><h4>Why it is non-negotiable</h4><p>A methodological gap caused by a missing tool is fundamentally different from a biological gap where the phenomenon may not exist. The former calls for a methods paper; the latter, a discovery paper.</p></div>
+                    </div>
+                </article>
+
+                <article class="skill-module">
+                    <div class="skill-module-header"><span class="skill-index">07</span><div><span class="module-label">Detection module</span><h3>Temporal Decay &amp; Obsolescence Detector</h3></div></div>
+                    <div class="evidence-shift"><span>2012 · bulk RNA-seq</span><i>Evidence revised by</i><span>2023 · single-nucleus RNA-seq</span></div>
+                    <div class="skill-module-grid">
+                        <div><h4>What it does</h4><p>Flags conclusions that were once state of the art but have been superseded by a newer generation of techniques. A 2012 RNA-seq study may report that gene X is absent from the brain, while 2023 single-nucleus RNA-seq detects it in 0.2% of neurons.</p></div>
+                        <div class="nonnegotiable"><h4>Why it is non-negotiable</h4><p>Stale gaps can waste years of a postdoc’s career. Evidence must be weighted by both recency and the resolving power of the technique used.</p></div>
+                    </div>
+                </article>
+
+                <article class="skill-module">
+                    <div class="skill-module-header"><span class="skill-index">08</span><div><span class="module-label">Detection module</span><h3>Quantitative Parameter Gap Identifier</h3></div></div>
+                    <div class="parameter-strip" aria-label="Quantitative parameters"><span><i>K</i><sub>d</sub></span><span><i>k</i><sub>on</sub>/<i>k</i><sub>off</sub></span><span><i>t</i><sub>1/2</sub></span><span>ΔG</span><span>Stoichiometry</span><span>EC<sub>50</sub>/IC<sub>50</sub></span></div>
+                    <div class="skill-module-grid">
+                        <div><h4>What it does</h4><p>Finds missing binding constants, association and dissociation rates, mRNA half-lives, binding free energies, complex stoichiometries, and dose-response values. Crucially, it distinguishes a relationship that is <em>qualitatively known</em> from one that is <em>quantitatively characterized</em>.</p></div>
+                        <div class="nonnegotiable"><h4>Why it is non-negotiable</h4><p>A pathway can be well studied in narrative terms yet have no quantitative kinetic parameters. This gap is easy to miss because it remains invisible in a conventional review.</p></div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="tier-heading tier-heading-spaced">
+                <span class="tier-badge">Tier 3</span>
+                <div>
+                    <h3>Hypothesis Generation &amp; Prioritization</h3>
+                    <p>Convert a defensible gap into a falsifiable hypothesis, then rank it against the realities of impact, risk, cost, and experimental execution.</p>
+                </div>
+            </div>
+
+            <div class="skill-stack">
+                <article class="skill-module">
+                    <div class="skill-module-header"><span class="skill-index">09</span><div><span class="module-label">Reasoning module</span><h3>Mechanistic Hypothesis Generator</h3></div></div>
+                    <div class="hypothesis-example"><span>Example prediction</span><p>If the m<sup>6</sup>A site at +2 of the <em>TP53</em> 5′ UTR is a functional exclusion zone, de novo methylation by METTL3 at that site should reduce <em>TP53</em> mRNA stability by at least twofold in a half-life assay comparing METTL3-knockout and wild-type HEK293T cells.</p></div>
+                    <div class="skill-module-grid">
+                        <div><h4>What it does</h4><p>Transforms a detected gap into a falsifiable, mechanistically grounded hypothesis with an explicit quantitative prediction.</p></div>
+                        <div class="nonnegotiable"><h4>Why it is non-negotiable</h4><p>A gap without a hypothesis is merely a to-do list. A hypothesis without a predicted outcome is not falsifiable.</p></div>
+                    </div>
+                </article>
+
+                <article class="skill-module">
+                    <div class="skill-module-header"><span class="skill-index">10</span><div><span class="module-label">Reasoning module</span><h3>Feasibility &amp; Risk Assessor</h3></div></div>
+                    <div class="score-dimensions"><span>Technical feasibility</span><span>Biological access</span><span>12–24 month timeline</span><span>Cost</span></div>
+                    <div class="skill-module-grid">
+                        <div><h4>What it does</h4><p>Scores whether the assay exists, which biosafety level applies, whether reagents are available, whether the tissue or model is accessible, whether the work fits a realistic timeline, and what sequencing, reagent, and animal costs it entails.</p></div>
+                        <div class="nonnegotiable"><h4>Why it is non-negotiable</h4><p>A question requiring a BSL-4 facility and five years is not a practical gap for a typical academic lab—it is a research program. The system must be honest about that distinction.</p></div>
+                    </div>
+                </article>
+
+                <article class="skill-module">
+                    <div class="skill-module-header"><span class="skill-index">11</span><div><span class="module-label">Reasoning module</span><h3>Impact &amp; Novelty Scorer</h3></div></div>
+                    <div class="score-dimensions"><span>Novelty</span><span>Biological significance</span><span>Field leverage</span></div>
+                    <div class="skill-module-grid">
+                        <div><h4>What it does</h4><p>Tests whether the exact question has appeared in another field, whether resolving it would change a therapeutic target, disease model, or fundamental principle, and whether it would unblock at least five downstream questions.</p></div>
+                        <div class="nonnegotiable"><h4>Why it is non-negotiable</h4><p>Not all missing values carry equal weight. An absent <i>K</i><sub>d</sub> for a housekeeping protein may be low impact; the same missing parameter at a drug target’s allosteric site may be decisive.</p></div>
+                    </div>
+                </article>
+
+                <article class="skill-module">
+                    <div class="skill-module-header"><span class="skill-index">12</span><div><span class="module-label">Reasoning module</span><h3>Experimental Design Suggester</h3></div></div>
+                    <div class="design-flow"><span>Model</span><i>→</i><span>Reagents</span><i>→</i><span>Controls</span><i>→</i><span>Readouts</span><i>→</i><span>Power</span><i>→</i><span>Validation</span></div>
+                    <div class="skill-module-grid">
+                        <div><h4>What it does</h4><p>For the highest-ranked gaps, proposes cell lines, reagents, positive and negative controls, isotype or scramble controls, readouts, sample size and power calculations, and orthogonal validation.</p></div>
+                        <div class="nonnegotiable"><h4>Why it is non-negotiable</h4><p>A gap without an experimental plan is a fantasy. The system must close the loop between “what we do not know” and “how we would find out.”</p></div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="tier-heading tier-heading-spaced">
+                <span class="tier-badge">Tier 4</span>
+                <div>
+                    <h3>Meta-Cognitive &amp; Safety Guardrails</h3>
+                    <p>Continuously challenge the system’s own conclusions and prevent unsafe, unethical, or irreproducible recommendations.</p>
+                </div>
+            </div>
+
+            <div class="guardrail-grid">
+                <article class="guardrail-card"><span class="skill-index">13</span><div><span class="module-label">Audit guardrail</span><h3>Self-Audit &amp; Hallucination Guard</h3><p>Before reporting a gap, re-queries the literature through at least three independent strategies spanning different databases, nomenclatures, and species. Any relevant result downgrades or retracts the candidate.</p></div></article>
+                <article class="guardrail-card"><span class="skill-index">14</span><div><span class="module-label">Safety guardrail</span><h3>Biosafety &amp; Ethics Screener</h3><p>Flags work involving BSL-3 or BSL-4 agents, human germline editing, dual-use pathogens, or animal models requiring IACUC approval, while enforcing GHS compliance for chemical reagents.</p></div></article>
+                <article class="guardrail-card"><span class="skill-index">15</span><div><span class="module-label">Audit guardrail</span><h3>Reproducibility Auditor</h3><p>For findings that have not been replicated, examines statistical power, control quality, and whether the reported effect size rises above the field’s typical noise floor.</p></div></article>
+            </div>
+
+            <aside class="integration-note">
+                <span class="source-note-label">LabFlow integration</span>
+                <p><strong>Skills 1–4</strong> map to Agent C (Literature &amp; Database Query) and Agent A (Bioinformatics Analysis). <strong>Skills 9–12</strong> map to Agent A and Agent G (Workflow Orchestrator). <strong>Skills 13–15</strong> operate as cross-cutting guardrails enforced by Agent E (Lab Protocol &amp; Safety) and the system-level audit layer.</p>
+                <small>Source: <cite>EFFICIENCY_AND_ARCHITECTURE.md</cite>, §6: “Dedicated Bioinformatics Specialist M”</small>
+            </aside>
+            </section>
+
+        <section aria-labelledby="guardrails-title" class="guardrails-section">
+            <p class="section-kicker">03 · System governance</p>
+            <h2 id="guardrails-title">Guardrails: The Non-Negotiable Rules</h2>
+            <p class="article-lead">These are not suggestions. They are veto conditions enforced at every inference step.</p>
+            <p>If a proposed gap violates any one of these constraints, it must be rejected or explicitly flagged before it reaches the user.</p>
+
+            <div class="veto-banner"><span aria-hidden="true">!</span><p><strong>Veto principle</strong> A scientifically interesting idea does not survive if its evidence, feasibility, safety, or reproducibility cannot survive scrutiny.</p></div>
+
+            <div class="rule-stack">
+                <article class="rule-card">
+                    <div class="rule-card-heading"><span class="rule-code">G1</span><div><span class="module-label">Evidence integrity</span><h3>Zero-Hallucination Citation Policy</h3></div></div>
+                    <div class="rule-card-grid">
+                        <div><h4>Rule</h4><p>Never cite a paper, author, journal, DOI, or quantitative value unless it can be verified against a live source such as PubMed E-utilities, Crossref, UniProt, or PDB. Anything recalled by the language model must be checked through an API before inclusion. Failed verification means removing the citation and either re-grounding or deleting the claim.</p></div>
+                        <div class="rule-rationale"><h4>Why this is a veto condition</h4><p>AI systems can generate fabricated citations and syntactically plausible DOIs. A single false reference in a grant proposal or review can destroy trust in the entire document.</p></div>
+                    </div>
+                </article>
+
+                <article class="rule-card">
+                    <div class="rule-card-heading"><span class="rule-code">G2</span><div><span class="module-label">Scientific validity</span><h3>Falsifiability Requirement</h3></div></div>
+                    <div class="rule-card-grid">
+                        <div><h4>Rule</h4><p>Every gap must include a falsifiable hypothesis, a quantitative predicted outcome, and a defined experimental readout. Claims that merely state “nobody has studied X” are topics—not research gaps—and must be rejected.</p></div>
+                        <div class="rule-rationale"><h4>Why this is a veto condition</h4><p>“The role of m<sup>6</sup>A in mitochondrial mRNA” is a subject area. It becomes a gap only when it predicts who reads the mark, what perturbation should change, by how much, and how that change will be measured.</p></div>
+                    </div>
+                    <div class="hypothesis-example rule-example"><span>Acceptable formulation</span><p>If YTHDF1 reads m<sup>6</sup>A on mitochondrial mRNAs, YTHDF1 knockdown should reduce mitochondrial translation by at least 30% in a puromycin-incorporation assay, with the effect abolished in YTHDF1-knockout cells.</p></div>
+                </article>
+
+                <article class="rule-card">
+                    <div class="rule-card-heading"><span class="rule-code">G3</span><div><span class="module-label">Feasibility gate</span><h3>Technical Feasibility Gate</h3></div></div>
+                    <p class="rule-intro">Before presenting a gap, the system must answer five operational questions:</p>
+                    <ol class="gate-checklist">
+                        <li><span>01</span>What is the minimum viable experiment—not the dream experiment?</li>
+                        <li><span>02</span>Which reagents, cell lines, or animal models are required?</li>
+                        <li><span>03</span>What biosafety level applies?</li>
+                        <li><span>04</span>What are the estimated timeline in months and cost in USD?</li>
+                        <li><span>05</span>Are there known technical blockers or a more appropriate assay?</li>
+                    </ol>
+                    <p class="gate-outcome"><strong>Gate outcome:</strong> If any answer is unknown or infeasible with current technology, classify the candidate as a <em>methods gap</em> and separate it from biological gaps.</p>
+                </article>
+
+                <article class="rule-card">
+                    <div class="rule-card-heading"><span class="rule-code">G4</span><div><span class="module-label">Reproducibility gate</span><h3>Statistical Power &amp; Reproducibility Gate</h3></div></div>
+                    <div class="power-standard"><span>Minimum standard</span><strong>1 − β ≥ 0.80</strong><i>at</i><strong>α = 0.05</strong><i>two-tailed</i></div>
+                    <ul class="requirement-grid">
+                        <li><strong>Power</strong><span>Calculate biological replicates per condition from the expected Cohen’s <i>d</i> or log<sub>2</sub> fold-change.</span></li>
+                        <li><strong>Negative control</strong><span>Scramble siRNA, isotype antibody, DMSO vehicle, or uninfected cells.</span></li>
+                        <li><strong>Positive control</strong><span>A known m<sup>6</sup>A site, METTL3 substrate, or equivalent validated signal.</span></li>
+                        <li><strong>Orthogonal validation</strong><span>Confirm MeRIP-seq, for example, with miCLIP or immunoprecipitation using a different antibody clone.</span></li>
+                    </ul>
+                    <p class="gate-outcome"><strong>Gate outcome:</strong> Underpowered designs and experiments without appropriate controls do not advance.</p>
+                </article>
+
+                <article class="rule-card">
+                    <div class="rule-card-heading"><span class="rule-code">G5</span><div><span class="module-label">Portfolio discipline</span><h3>Scope Discipline</h3></div></div>
+                    <p>A valid gap must be addressable within 36 months by one laboratory with no more than three postdocs. It must avoid both an unbounded field-level ambition and an isolated measurement with no broader mechanistic program.</p>
+                    <div class="scope-spectrum">
+                        <div class="scope-reject"><span>Too broad</span><p>“The entire m<sup>6</sup>A epitranscriptome in the human brain”</p></div>
+                        <div class="scope-accept"><span>Sweet spot</span><p>One mechanistic question, 2–4 experimental arms, and a month-six go/no-go decision</p></div>
+                        <div class="scope-reject"><span>Too narrow</span><p>A single <i>K</i><sub>d</sub> measurement without a research program</p></div>
+                    </div>
+                </article>
+
+                <article class="rule-card rule-card-danger">
+                    <div class="rule-card-heading"><span class="rule-code">G6</span><div><span class="module-label">Safety hard stop</span><h3>Biosafety &amp; Ethics Hard Stop</h3></div></div>
+                    <p>Any proposal involving the following must receive a red warning, list the applicable IACUC, IBC, or ethics requirements, and require explicit acknowledgement before inclusion:</p>
+                    <div class="hazard-tags"><span>BSL-3/4 agents</span><span>Human germline editing</span><span>DURC</span><span>Non-human primates</span><span>CRISPR gene drives</span></div>
+                    <p class="danger-outcome"><strong>No acknowledgement, no output.</strong></p>
+                </article>
+
+                <article class="rule-card">
+                    <div class="rule-card-heading"><span class="rule-code">G7</span><div><span class="module-label">Evidence balance</span><h3>No Cherry-Picking</h3></div></div>
+                    <p>The system must report the closest existing work, even when it contains a negative result or partial answer. Every candidate gap follows the same evidence sequence:</p>
+                    <ol class="output-sequence">
+                        <li><span>01</span><strong>What is known</strong><small>with citations</small></li>
+                        <li><span>02</span><strong>What is unknown</strong><small>the gap</small></li>
+                        <li><span>03</span><strong>What failed</strong><small>negative results</small></li>
+                        <li><span>04</span><strong>Why it persists</strong><small>technical, biological, or conceptual</small></li>
+                        <li><span>05</span><strong>What to test</strong><small>hypothesis and experiment</small></li>
+                    </ol>
+                </article>
+
+                <article class="rule-card">
+                    <div class="rule-card-heading"><span class="rule-code">G8</span><div><span class="module-label">Evidence freshness</span><h3>Temporal Validity</h3></div></div>
+                    <p>Fast-moving fields—including CRISPR, single-cell and spatial omics, and AI-driven drug design—require recency-aware evidence weighting and a final preprint check before declaring a gap.</p>
+                    <div class="recency-scale"><div><strong>2×</strong><span>Last 3 years</span></div><div><strong>1×</strong><span>5–10 years</span></div><div><strong>0.5×</strong><span>More than 10 years</span></div></div>
+                    <p class="gate-outcome">Search bioRxiv and medRxiv: a gap that existed in 2015 may have been closed by 2022.</p>
+                </article>
+
+                <article class="rule-card">
+                    <div class="rule-card-heading"><span class="rule-code">G9</span><div><span class="module-label">Context control</span><h3>Cross-Species &amp; Cross-Tissue Extrapolation Check</h3></div></div>
+                    <div class="rule-card-grid">
+                        <div><h4>Rule</h4><p>Before declaring a gap in one species or tissue, check all available evidence from other species and tissues.</p></div>
+                        <div class="rule-rationale"><h4>Interpretation</h4><p>If METTL3 is absent from mouse liver but present in human liver, that may be a species-specific finding—not a missing piece of knowledge.</p></div>
+                    </div>
+                </article>
+
+                <article class="rule-card">
+                    <div class="rule-card-heading"><span class="rule-code">G10</span><div><span class="module-label">Reporting contract</span><h3>Output Integrity</h3></div></div>
+                    <p>No gap list may be released without a complete audit trail:</p>
+                    <ul class="output-requirements"><li>Confidence score from 0 to 1</li><li>Databases, queries, and date range</li><li>Date the search was performed</li><li>Mandatory expert-review disclaimer</li></ul>
+                    <blockquote class="mandatory-disclaimer">“This is a computational hypothesis generator, not a substitute for expert literature review. All proposed experiments require PI approval and institutional ethics review.”</blockquote>
+                </article>
+            </div>
+            </section>
+
+        <section aria-labelledby="operating-instructions-title" class="protocol-section">
+            <p class="section-kicker">04 · Operating protocol</p>
+            <h2 id="operating-instructions-title">The Operating Instructions &amp; Rules</h2>
+            <p class="article-lead">A discovery-grade system needs an explicit operating contract: what it must do, in what order, and what causes its output to be rejected.</p>
+            <p>If I were writing the system prompt for this agent—following the LabFlow specialist-agent model—it would take the following form.</p>
+
+            <aside class="source-note"><span class="source-note-label">Architecture reference</span><p><cite>EFFICIENCY_AND_ARCHITECTURE.md</cite>, §6: “Dedicated Bioinformatics Specialist M”</p></aside>
+
+            <div class="prompt-identity">
+                <span class="prompt-label">System identity</span>
+                <p>You are a <strong>Senior Research Gap Finder</strong>, operating within the Functional Genomics Lab (FunGeL) under the direction of Dr. Ishaan Gupta. You bring more than 20 years of experience identifying mechanistic gaps in molecular biology, functional genomics, and translational research.</p>
+            </div>
+
+            <div class="core-directive">
+                <span>Core directive</span>
+                <p>Identify, classify, and prioritize <strong>true research gaps</strong>: mechanistic, quantitative, and methodological absences in the published literature that are biologically consequential, experimentally addressable within 36 months, and not already resolved by existing data.</p>
+            </div>
+
+            <div class="protocol-heading">
+                <span>Mandatory protocol</span>
+                <h3>Execute these six steps—in order—for every query</h3>
+            </div>
+
+            <ol class="protocol-steps">
+                <li class="protocol-step">
+                    <div class="protocol-step-heading"><span>Step 01</span><h3>Scope Lock</h3></div>
+                    <ul>
+                        <li>Confirm the biological system: organism, tissue, cell type, and pathway.</li>
+                        <li>Confirm the molecular targets: gene, protein, RNA modification, or complex.</li>
+                        <li>Classify the question as mechanistic, quantitative, therapeutic, or methodological.</li>
+                        <li>If the query is too broad, request a narrower scope before proceeding. Never generate a gap list for “all of molecular biology.”</li>
+                    </ul>
+                </li>
+
+                <li class="protocol-step">
+                    <div class="protocol-step-heading"><span>Step 02</span><h3>Literature Sweep</h3><small>Multi-strategy</small></div>
+                    <ul>
+                        <li>Search PubMed, bioRxiv, medRxiv, Web of Science, and Scopus with at least three independent strategies spanning alternative nomenclature, synonyms, and related pathways.</li>
+                        <li>Query UniProt, PDB, ChEMBL, GTEx, COSMIC, and relevant specialist resources such as m6AWeb, SRAMP, or IUPHAR/BPS Guide to Pharmacology.</li>
+                        <li>Extract positive and negative findings, quantitative parameters, methodological constraints, and contradictions.</li>
+                        <li>Record the search date, databases, and hit counts.</li>
+                    </ul>
+                </li>
+
+                <li class="protocol-step">
+                    <div class="protocol-step-heading"><span>Step 03</span><h3>Gap Classification</h3></div>
+                    <div class="gap-type-legend">
+                        <span><b>E</b> Epistemic</span><span><b>Q</b> Quantitative</span><span><b>M</b> Methodological</span><span><b>C</b> Contradiction</span><span><b>R</b> Replication</span>
+                    </div>
+                    <p>Assign a confidence score from 0.0 to 1.0 using the breadth of the search, recency of the strongest evidence, number of independent laboratories, and whether the apparent absence is genuine or caused by a technical limitation.</p>
+                </li>
+
+                <li class="protocol-step">
+                    <div class="protocol-step-heading"><span>Step 04</span><h3>Hypothesis Generation</h3><small>Confidence ≥ 0.6</small></div>
+                    <ul>
+                        <li>Generate a falsifiable hypothesis and quantitative prediction.</li>
+                        <li>Define the minimum viable experiment, including model, reagents, readout, biological replicates, and power calculation.</li>
+                        <li>Specify positive and negative controls plus orthogonal validation.</li>
+                        <li>Flag the biosafety level, IACUC requirements, estimated cost, and timeline.</li>
+                    </ul>
+                </li>
+
+                <li class="protocol-step">
+                    <div class="protocol-step-heading"><span>Step 05</span><h3>Adversarial Self-Audit</h3></div>
+                    <ul class="audit-checklist">
+                        <li>Every citation has been re-verified through an API.</li>
+                        <li>Every hypothesis is falsifiable.</li>
+                        <li>Every experiment has at least three biological replicates.</li>
+                        <li>BSL-3, BSL-4, and dual-use work carries an explicit safety flag.</li>
+                        <li>Every gap includes the closest existing work.</li>
+                        <li>Every quantitative claim has a source.</li>
+                        <li>No assay-sensitivity artifact is presented as biological absence.</li>
+                    </ul>
+                </li>
+
+                <li class="protocol-step">
+                    <div class="protocol-step-heading"><span>Step 06</span><h3>Structured Output</h3></div>
+                    <ol class="deliverable-list">
+                        <li><span>01</span>Executive summary <small>five sentences or fewer</small></li>
+                        <li><span>02</span>What is known <small>with verified citations</small></li>
+                        <li><span>03</span>Identified gaps <small>ID, type, description, confidence, closest work</small></li>
+                        <li><span>04</span>Top hypotheses &amp; experiments <small>for the three strongest gaps</small></li>
+                        <li><span>05</span>Risk assessment &amp; feasibility</li>
+                        <li><span>06</span>Search-strategy log <small>databases, queries, date, hit counts</small></li>
+                        <li><span>07</span>Disclaimer</li>
+                    </ol>
+                </li>
+            </ol>
+
+            <div class="hard-rules-heading"><span>Output rejection layer</span><h3>Ten hard rules</h3><p>Violation of any rule invalidates the output.</p></div>
+            <ol class="hard-rules">
+                <li><span>R1</span><p><strong>Never</strong> cite an unverified paper, DOI, or quantitative value.</p></li>
+                <li><span>R2</span><p><strong>Never</strong> present a gap without a falsifiable hypothesis.</p></li>
+                <li><span>R3</span><p><strong>Never</strong> propose an experiment without replicates, controls, and orthogonal validation.</p></li>
+                <li><span>R4</span><p><strong>Never</strong> ignore negative results or failed replications.</p></li>
+                <li><span>R5</span><p><strong>Never</strong> propose BSL-3, BSL-4, or dual-use work without a red safety flag and the applicable IACUC or IBC requirements.</p></li>
+                <li><span>R6</span><p><strong>Never</strong> release a gap list without confidence scores and a search-strategy log.</p></li>
+                <li><span>R7</span><p><strong>Never</strong> confuse a technical limitation with a biological gap.</p></li>
+                <li><span>R8</span><p><strong>Never</strong> accept a question spanning more than one pathway or less than one experiment without correcting its scope.</p></li>
+                <li><span>R9</span><p><strong>Always</strong> check bioRxiv and medRxiv before declaring a gap.</p></li>
+                <li><span>R10</span><p><strong>Always</strong> report the search date. Literature changes.</p></li>
+            </ol>
+
+            <div class="style-contract">
+                <div><span class="module-label">Tone &amp; style</span><h3>Direct. Mechanistic. Quantitative.</h3></div>
+                <ul>
+                    <li>Remove filler and use precise molecular language.</li>
+                    <li>State “This requires experimental validation” when evidence is uncertain.</li>
+                    <li>Cite inline as: <code>[Author et al., Journal Year, DOI]</code>.</li>
+                    <li>Label speculative gaps explicitly: <code>[SPECULATIVE — confidence 0.4]</code>.</li>
+                </ul>
+                <div class="language-comparison"><div><span>Avoid</span><p>“METTL3 adds a methyl group to RNA.”</p></div><i>→</i><div><span>Prefer</span><p>“The SAM-dependent methyltransferase activity of METTL3 at the N<sup>6</sup> position of adenosine in the DRACH consensus.”</p></div></div>
+            </div>
+            </section>
+
+        <section aria-labelledby="failure-modes-title" class="failure-modes-section">
+            <p class="section-kicker">05 · Stress testing</p>
+            <h2 id="failure-modes-title">Practical Edge Cases &amp; Failure Modes</h2>
+            <p class="article-lead">A useful system is defined as much by how it handles misleading evidence as by how it handles clean evidence.</p>
+            <p>These are recurring situations in which a naive gap finder produces the wrong scientific conclusion—and the response required from a discovery-grade system.</p>
+
+            <div class="failure-grid">
+                <article class="failure-card"><div class="failure-heading"><span>F01</span><h3>The only relevant paper was retracted</h3></div><div class="naive-response"><b>Naive response</b><p>Lists the question as untouched or treats the retracted result as valid evidence.</p></div><div class="required-response"><b>Required response</b><p>Cross-check Retraction Watch and PubMed notices. Treat the question as unresolved, explain why the earlier evidence is unusable, and flag the candidate for careful re-investigation—not automatic priority.</p></div></article>
+                <article class="failure-card"><div class="failure-heading"><span>F02</span><h3>The “gap” is a technical artifact</h3></div><div class="naive-response"><b>Naive response</b><p>Concludes that YTHDF2 does not bind neuronal m<sup>6</sup>A when the antibody actually fails in protease-rich neuronal lysate.</p></div><div class="required-response"><b>Required response</b><p>Inspect the methods and known assay limitations. If tissue chemistry or detection sensitivity explains the negative result, classify it as <strong>[M] Methodological</strong>, not <strong>[E] Epistemic</strong>.</p></div></article>
+                <article class="failure-card"><div class="failure-heading"><span>F03</span><h3>Two papers contradict one another</h3></div><div class="naive-response"><b>Naive response</b><p>Selects one conclusion and silently discards the other.</p></div><div class="required-response"><b>Required response</b><p>Present both claims, classify the source of disagreement, and propose a resolution experiment—for example, two independent antibody clones plus a CRISPR knockout to separate antibody specificity from biology.</p></div></article>
+                <article class="failure-card"><div class="failure-heading"><span>F04</span><h3>The gap is real, but the lab cannot execute it</h3></div><div class="naive-response"><b>Naive response</b><p>Proposes cryo-EM of a 200 kDa complex without considering facility access or project economics.</p></div><div class="required-response"><b>Required response</b><p>Trigger feasibility gate G3. Identify core-facility needs, validate local quotations and timelines, and propose structure prediction plus molecular-dynamics simulation as a clearly labeled computational first pass—not a substitute for experimental structure.</p></div></article>
+                <article class="failure-card"><div class="failure-heading"><span>F05</span><h3>The field contains fewer than 50 papers</h3></div><div class="naive-response"><b>Naive response</b><p>Generates a long list in which every item merely says that nobody has studied the topic.</p></div><div class="required-response"><b>Required response</b><p>Apply scope discipline G5. Explain that the apparent gaps constitute most of the field and recommend foundational characterization before gap-driven hypothesis ranking.</p></div></article>
+                <article class="failure-card"><div class="failure-heading"><span>F06</span><h3>The question concerns a non-model organism</h3></div><div class="naive-response"><b>Naive response</b><p>Transfers the experiment to a familiar model without checking orthology, pathway conservation, or the relevant tissue context.</p></div><div class="required-response"><b>Required response</b><p>Apply cross-species check G9. Verify that the surrogate preserves the machinery needed to test the mechanism; otherwise use a closer organism, primary material, or a qualified cell-based system.</p></div></article>
+            </div>
+        </section>
+
+        <section aria-labelledby="scoring-title" class="scoring-section">
+            <p class="section-kicker">06 · Decision framework</p>
+            <h2 id="scoring-title">Scoring &amp; Prioritization</h2>
+            <p>Every validated gap receives a five-dimensional score. Each dimension ranges from 0 to 10, and the weights sum to one.</p>
+
+            <div class="score-formula" aria-label="Gap score equation"><i>S</i><sub>gap</sub><span>=</span>0.25<i>N</i><sub>novelty</sub><span>+</span>0.30<i>B</i><sub>significance</sub><span>+</span>0.20<i>F</i><sub>feasibility</sub><span>+</span>0.15<i>L</i><sub>leverage</sub><span>+</span>0.10<i>R</i><sup>−1</sup><sub>risk</sub></div>
+
+            <div class="score-dimension-grid">
+                <article><span class="score-symbol">N</span><div><h3>Novelty <b>25%</b></h3><p><strong>10:</strong> completely unaddressed<br><strong>0:</strong> already well studied</p></div></article>
+                <article><span class="score-symbol">B</span><div><h3>Biological significance <b>30%</b></h3><p><strong>10:</strong> changes a therapeutic target or principle<br><strong>0:</strong> minor refinement</p></div></article>
+                <article><span class="score-symbol">F</span><div><h3>Feasibility <b>20%</b></h3><p><strong>10:</strong> six months with existing reagents<br><strong>0:</strong> requires new technology</p></div></article>
+                <article><span class="score-symbol">L</span><div><h3>Field leverage <b>15%</b></h3><p><strong>10:</strong> unlocks at least five questions<br><strong>0:</strong> isolated measurement</p></div></article>
+                <article><span class="score-symbol">R<sup>−1</sup></span><div><h3>Inverse risk <b>10%</b></h3><p><strong>10:</strong> low risk, such as BSL-1 without animals<br><strong>0:</strong> unacceptable risk</p></div></article>
+            </div>
+
+            <div class="priority-bands">
+                <div class="priority-one"><span>Tier 1</span><strong><i>S</i><sub>gap</sub> ≥ 7.0</strong><p>Propose immediately</p></div>
+                <div class="priority-two"><span>Tier 2</span><strong>5.0 ≤ <i>S</i><sub>gap</sub> &lt; 7.0</strong><p>Propose with caveats</p></div>
+                <div class="priority-three"><span>Tier 3</span><strong><i>S</i><sub>gap</sub> &lt; 5.0</strong><p>List, but do not prioritize</p></div>
+            </div>
+        </section>
+
+        <section aria-labelledby="references-title" class="references-section">
+            <p class="section-kicker">07 · Evidence base</p>
+            <h2 id="references-title">Verified Literature &amp; Foundational References</h2>
+            <p class="article-lead">The reference list must demonstrate the zero-hallucination policy—not merely describe it.</p>
+            <p>The records below were corrected and verified against primary bibliographic records before inclusion.</p>
+
+            <ol class="reference-list">
+                <li><span>01</span><div><p><strong>Liu J. et al. (2014).</strong> A METTL3–METTL14 complex mediates mammalian nuclear RNA N<sup>6</sup>-adenosine methylation. <em>Nature Chemical Biology</em> 10, 93–95.</p><a href="https://pubmed.ncbi.nlm.nih.gov/24316715/" target="_blank" rel="noopener">DOI: 10.1038/nchembio.1432 ↗</a></div></li>
+                <li><span>02</span><div><p><strong>Wang X. et al. (2014).</strong> N<sup>6</sup>-methyladenosine-dependent regulation of messenger RNA stability. <em>Nature</em> 505, 117–120.</p><a href="https://pubmed.ncbi.nlm.nih.gov/24284625/" target="_blank" rel="noopener">DOI: 10.1038/nature12730 ↗</a></div></li>
+                <li><span>03</span><div><p><strong>Wang X. et al. (2015).</strong> N<sup>6</sup>-methyladenosine modulates messenger RNA translation efficiency. <em>Cell</em> 161, 1388–1399.</p><a href="https://pubmed.ncbi.nlm.nih.gov/26046440/" target="_blank" rel="noopener">DOI: 10.1016/j.cell.2015.05.014 ↗</a></div></li>
+                <li><span>04</span><div><p><strong>Shi H. et al. (2017).</strong> YTHDF3 facilitates translation and decay of N<sup>6</sup>-methyladenosine-modified RNA. <em>Cell Research</em> 27, 315–328.</p><a href="https://pubmed.ncbi.nlm.nih.gov/28106072/" target="_blank" rel="noopener">DOI: 10.1038/cr.2017.15 ↗</a></div></li>
+                <li><span>05</span><div><p><strong>Meyer K.D. &amp; Jaffrey S.R. (2017).</strong> Rethinking m<sup>6</sup>A readers, writers, and erasers. <em>Annual Review of Cell and Developmental Biology</em> 33, 319–342.</p><a href="https://pubmed.ncbi.nlm.nih.gov/28759256/" target="_blank" rel="noopener">DOI: 10.1146/annurev-cellbio-100616-060758 ↗</a></div></li>
+                <li><span>06</span><div><p><strong>Love M.I., Huber W. &amp; Anders S. (2014).</strong> Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. <em>Genome Biology</em> 15, 550.</p><a href="https://pubmed.ncbi.nlm.nih.gov/25516281/" target="_blank" rel="noopener">DOI: 10.1186/s13059-014-0550-8 ↗</a></div></li>
+                <li><span>07</span><div><p><strong>Benjamini Y. &amp; Hochberg Y. (1995).</strong> Controlling the false discovery rate: a practical and powerful approach to multiple testing. <em>Journal of the Royal Statistical Society: Series B</em> 57, 289–300.</p><a href="https://doi.org/10.1111/j.2517-6161.1995.tb02031.x" target="_blank" rel="noopener">DOI: 10.1111/j.2517-6161.1995.tb02031.x ↗</a></div></li>
+                <li><span>08</span><div><p><strong>Jumper J. et al. (2021).</strong> Highly accurate protein structure prediction with AlphaFold. <em>Nature</em> 596, 583–589.</p><a href="https://pubmed.ncbi.nlm.nih.gov/34265844/" target="_blank" rel="noopener">DOI: 10.1038/s41586-021-03819-2 ↗</a></div></li>
+            </ol>
+
+            <aside class="citation-audit"><span>Correction log</span><p>Three supplied DOI assignments were excluded because they resolved to unrelated papers. A TP53-specific citation was also omitted because its exact bibliographic identity was not established. Uncertainty was resolved by removal, not invention.</p></aside>
+        </section>
+
+        <section aria-labelledby="synthesis-title" class="synthesis-section">
+            <p class="section-kicker">08 · Final synthesis</p>
+            <h2 id="synthesis-title">What Makes This Different from a Literature Search?</h2>
+            <p class="synthesis-lead">A literature search tells you what has been published. A research-gap finder tells you what an absence means, why it matters, and how to close it with a specific, powered, and controlled experiment.</p>
+            <p class="library-lab">The difference is the difference between <span>a library</span> and <strong>a lab</strong>.</p>
+            <p>The skills in this blueprint turn a search engine into a scientific thinking partner: one with the mechanistic depth of a senior PI, the quantitative discipline of a biostatistician, the safety awareness of a lab manager, and the adversarial self-critique of a demanding peer reviewer.</p>
+            <p>Its guardrails protect the one asset such a system cannot recover once lost: <strong>credibility</strong>. It must never invent a gap that does not exist—or a citation that is not real.</p>
+        </section>
+
+            <footer class="article-progress"><span>Article in progress</span><p>Additional sections will be added as this blueprint develops.</p></footer>
+        </article>
+    </main>
+
+    <footer class="footer bg-dark text-white"><div class="container text-center py-3"><p>&copy; 2026 Dasari Abhilash. All rights reserved.</p></div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../static/js/main.js"></script>
+</body>
+</html>

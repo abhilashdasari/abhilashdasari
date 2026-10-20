@@ -15,6 +15,8 @@ title: Home
                         <span>Bulk RNA-seq</span>
                         <span>Single-cell RNA-seq</span>
                         <span>Spatial transcriptomics</span>
+                        <span>Genomics &amp; Multi-Omics</span>
+                        <span>Healthcare AI &amp; Data Privacy</span>
                     </div>
                     <div class="social-links">
                         <a href="mailto:abhilashdasari.10@gmail.com" class="btn btn-outline-primary" aria-label="Email">
@@ -41,10 +43,10 @@ title: Home
                     <img src="{{ '/attached_assets/abhi.jpg' | relative_url }}" alt="Dasari Abhilash" class="hero-photo" />
                     <p class="hero-card-label">Research focus</p>
                     <ul class="hero-card-list">
-                        <li>Bulk RNA-seq, single-cell RNA-seq, and spatial transcriptomics</li>
+                        <li>Bulk, single-cell, and spatial transcriptomics</li>
                         <li>Alternative splicing and transcript isoform analysis</li>
-                        <li>Bioinformatics pipelines and data visualization</li>
-                        <li>Teaching, mentoring, and scientific communication</li>
+                        <li>Genomics, multi-omics integration &amp; biomarker discovery</li>
+                        <li>Healthcare AI, HPC pipelines &amp; data privacy</li>
                     </ul>
                     <div class="hero-card-footer">
                         <a href="#publications">View Publications</a>
@@ -80,13 +82,13 @@ title: Home
                     <h3>Student Exchange Program</h3>
                     <p class="institution">IHU-ICAN, Sorbonne University, Paris, France</p>
                     <p class="period">Feb 2025 - July 2025</p>
-                    <p>Working with Dr. Maharaja Ponniah and Dr. Nadine Suffee on discovering novel biomarkers of atrial cardiomyopathy using imagery and tissue biology.</p>
+                    <p>Working with Dr. Maharaja Ponniah and Dr. Nadine Suffee on discovering novel biomarkers of atrial cardiomyopathy using imagery and tissue biology. Conducted high-resolution single-cell (scRNA-seq) and spatial transcriptomics processing, QC, normalization, and cell-type annotation, and integrated spatial data with tissue histology and imaging to map spatial niches, disease-specific cell states, and intercellular signaling pathways (CellChat).</p>
                 </div>
                 <div class="timeline-item">
                     <h3>PhD Thesis Project (Bioinformatics)</h3>
                     <p class="institution">Indian Institute of Technology Delhi</p>
-                    <p class="period">September 2020 - Present</p>
-                    <p>Working with Dr. Ishaan Gupta on Dissecting the role of alternative splicing in respiratory and hepatobiliary pathology.</p>
+                    <p class="period">September 2020 - October 2026</p>
+                    <p>Working with Dr. Ishaan Gupta on dissecting the role of alternative splicing in respiratory and hepatobiliary pathology. Developed automated, reproducible end-to-end pipelines (R, Python, BASH) on Slurm-managed HPC environments for deep transcriptomic profiling, alternative splicing quantification, and differential expression across multi-cohort clinical datasets; performed multi-omics integration linking transcriptomic signatures with clinical metadata; architected a privacy-preserving, on-premise LLM inference stack (llama.cpp, Qwen 27B &amp; 125B) for automated bioinformatics scripting; and collaborated with clinical and pathology teams at AIIMS.</p>
                 </div>
                 <div class="timeline-item">
                     <h3>M.Sc Thesis Project (Genomics)</h3>
@@ -132,6 +134,7 @@ title: Home
                         <div class="publication-group mt-3">
                             <h4>Second Author</h4>
                             <ul class="publication-list">
+                                <li>Crepin, L., <strong>Abhilash, D.</strong>, Mougenot, N., Trenquier, E., Lanthiez, F., Abdou, I., Mihoc, M., de Raymon-Cahuzac, A., Ponnaiah, M., Karkeni, E., Chabbat-Courrede, C., Gautier, E.L., Gupta, I., Lebreton, G., Leprince, P., Boissonnas, A., Hatem, S.N. and Suffee, N., 2026. Epicardial fat drives macrophage response in atrial cardiomyopathy. <em>Circulation Research</em>. <a href="https://doi.org/10.1161/circresaha.125.328051" target="_blank" rel="noopener">(DOI)</a></li>
                                 <li>Saxena, V., <strong>Abhilash, D.</strong>, Budhraja, A., Dey, S., Tiwari, P., Mohan, A., Gupta, I. and Kumar, S., 2026. RNA sequencing reveals differential expression of circular RNAs in human small cell lung cancer. <em>Scientific Reports</em>. <a href="https://doi.org/10.1038/s41598-026-38145-y" target="_blank" rel="noopener">(DOI)</a></li>
                                 <li>Dhania, N.K., Chauhan, V.K., <strong>Abhilash, D.</strong>, Thakur, V., Chaitanya, R.K., Dutta-Gupta, S. and Dutta-Gupta, A., 2021. Gut-specific arylphorin mediates midgut regenerative response against Cry-induced damage in <em>Achaea janata</em>. <em>Comparative Biochemistry and Physiology Part B: Biochemistry and Molecular Biology</em>, 255, p.110600. <a href="https://doi.org/10.1016/j.cbpb.2021.110600" target="_blank" rel="noopener">(DOI)</a></li>
                             </ul>
@@ -157,7 +160,7 @@ title: Home
                 <div class="info-card">
                     <h3>Education</h3>
                     <ul class="clean-list">
-                        <li>PhD, Department of Biochemical Engineering and Biotechnology — Indian Institute of Technology Delhi (Sep 2020 - Present)</li>
+                        <li>PhD, Department of Biochemical Engineering and Biotechnology — Indian Institute of Technology Delhi (Sep 2020 - Oct 2026)</li>
                         <li>Integrated M.Sc. in Systems Biology — University of Hyderabad (Jul 2015 - May 2020). GPA: 7.73/10.0</li>
                         <li>Higher Secondary School Certificate — Sri Chaitanya junior kalasala (Jun 2013 - May 2015). Percentage: 93.60 (Biology, Physics, Chemistry)</li>
                         <li>Secondary School Certificate — Manair High School (Jun 2012 - Apr 2013). CGPA: 8.8</li>
@@ -255,59 +258,85 @@ title: Home
                     <div class="skill-category">
                         <h3>Programming Languages</h3>
                         <ul class="skill-list">
-                            <li><i class="fas fa-code"></i> R (tidyverse, Bioconductor)</li>
-                            <li><i class="fas fa-code"></i> Python (pandas, NumPy, SciPy)</li>
-                            <li><i class="fas fa-terminal"></i> Bash (shell scripting)</li>
+                            <li><i class="fas fa-code"></i> R</li>
+                            <li><i class="fas fa-code"></i> Python</li>
+                            <li><i class="fas fa-terminal"></i> BASH</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="skill-category">
-                        <h3>Bioinformatics & Transcriptomics</h3>
+                        <h3>Single-Cell Transcriptomics</h3>
                         <ul class="skill-list">
-                            <li>Bulk RNA-seq (alignment, quantification, differential expression)</li>
-                            <li>Single-cell RNA-seq (Seurat/Scanpy)</li>
-                            <li>Spatial transcriptomics analysis; cell type deconvolution</li>
-                            <li>Transcript isoform / alternative splicing analysis</li>
+                            <li>End-to-end sc/snRNA-seq processing (QC, normalization, clustering, cell-type annotation)</li>
+                            <li>Trajectory inference and ligand-receptor signaling</li>
+                            <li>Seurat, Scanpy, SingleCellExperiment, Monocle, Slingshot, CellChat</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="skill-category">
-                        <h3>NGS Tools & Pipelines</h3>
+                        <h3>Spatial Transcriptomics</h3>
                         <ul class="skill-list">
-                            <li>FASTQ processing (FastQC, Trimmomatic)</li>
-                            <li>Alignment (STAR, HISAT2)</li>
-                            <li>Quantification (featureCounts, Salmon)</li>
-                            <li>Workflow automation (Snakemake/Nextflow)</li>
+                            <li>High-resolution spatial profiling across sequencing and imaging platforms (10x Visium, Xenium, CosMx, MERFISH)</li>
+                            <li>Spot deconvolution, spatial domain clustering, histological image integration</li>
+                            <li>SPOTlight, BANKSY, Squidpy</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="skill-category">
-                        <h3>Data Visualization & Statistics</h3>
+                        <h3>Transcriptomics &amp; Alternative Splicing</h3>
                         <ul class="skill-list">
-                            <li>ggplot2, ComplexHeatmap</li>
-                            <li>Statistical modeling, exploratory data analysis</li>
+                            <li>Differential gene and transcript-level expression; novel isoform discovery</li>
+                            <li>Alternative splicing quantification (exon skipping, intron retention, mutually exclusive exons)</li>
+                            <li>STAR, Kallisto, Salmon, DEXSeq, rMATS, LeafCutter, Sleuth, FLAIR</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="skill-category">
-                        <h3>Computational Environment</h3>
+                        <h3>Genomics</h3>
                         <ul class="skill-list">
-                            <li>Linux/UNIX systems</li>
-                            <li>HPC/cluster computing</li>
-                            <li>Version control (Git)</li>
+                            <li>WGS, WES, and targeted panel pipelines (alignment, germline/somatic variant calling, functional annotation, GWAS)</li>
+                            <li>BWA, Bowtie2, samtools, GATK, bcftools, FreeBayes, VEP, ANNOVAR, PLINK</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="skill-category">
-                        <h3>Experimental & Languages</h3>
+                        <h3>Multi-Omics Analysis</h3>
+                        <ul class="skill-list">
+                            <li>Integration of transcriptomics, proteomics, and metabolomics with clinical metadata</li>
+                            <li>Matrix factorization, batch correction, co-expression network modeling</li>
+                            <li>Patient stratification and translational biomarker discovery</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill-category">
+                        <h3>HPC &amp; Workflow Management</h3>
+                        <ul class="skill-list">
+                            <li>Reproducible analytical workflows on Linux/UNIX HPC clusters</li>
+                            <li>Slurm, Nextflow, Snakemake, Conda, Git</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill-category">
+                        <h3>Healthcare AI &amp; Data Privacy</h3>
+                        <ul class="skill-list">
+                            <li>Air-gapped, on-premise serving of open-source LLMs (Qwen 27B via llama.cpp) on local GPU/HPC clusters</li>
+                            <li>Secure agentic frameworks for automated biomedical workflows without external cloud exposure</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill-category">
+                        <h3>Experimental &amp; Languages</h3>
                         <ul class="skill-list">
                             <li>Gel Electrophoresis, Western Blot, Bacterial culture handling, Microscopy, PCR</li>
-                            <li>English, Hindi, Telugu (Reading, Writing and Speaking)</li>
+                            <li>English, Hindi, Telugu</li>
                         </ul>
                     </div>
                 </div>
